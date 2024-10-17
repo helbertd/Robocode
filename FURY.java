@@ -33,8 +33,8 @@ public class FURY extends Robot
 	}
 
 		public void onHitByBullet(HitByBulletEvent e) {
-		back(100);
-		turnLeft(110);
+		ahead(100);
+		turnLeft(90);
 		
 	}
 		public void onHitWall(HitWallEvent e) {
@@ -42,5 +42,9 @@ public class FURY extends Robot
 		turnRight(100);
 		ahead(100);
 	}
+		public void onHitRobot(HitRobotEvent inimigo) {
+		turnRight(inimigo.getBearing());
+		fire(3);
 
+	}
 }
