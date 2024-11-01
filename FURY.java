@@ -11,10 +11,16 @@ public class FURY extends Robot
     public void run() {  
         setColors(Color.RED, Color.BLUE, Color.YELLOW); 
         while (true) {
-            ahead(200);
-            turnGunRight(360);
-            scan();
-            turnRight(90);
+        	for(int voltasDir =0; voltasDir<2; voltasDir++){
+			ahead(200);
+            		turnGunRight(360);
+            		scan();
+            		turnRight(90);}
+		for(int voltasEsq =2; voltasEsq>0; voltasEsq--){
+			ahead(200);
+            		turnGunRight(360);
+            		scan();
+            		turnRight(90);}
         }
     }
 
